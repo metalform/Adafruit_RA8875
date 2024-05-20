@@ -233,36 +233,36 @@ public:
   void setRotation(int8_t rotation);
   int8_t getRotation(void);
 
-#ifndef USE_ADAFRUIT_GFX_FONTS
-  /**************************************************************************/
-  /*!
-     Alias of textWrite to Play nice with Arduino's Print class
+// #ifndef USE_ADAFRUIT_GFX_FONTS
+//   /**************************************************************************/
+//   /*!
+//      Alias of textWrite to Play nice with Arduino's Print class
 
-     @param b The string to write
+//      @param b The string to write
 
-     @return The number of bytes written
-   */
-  /**************************************************************************/
-  virtual size_t write(uint8_t b) {
-    textWrite((const char *)&b, 1);
-    return 1;
-  }
+//      @return The number of bytes written
+//    */
+//   /**************************************************************************/
+//   virtual size_t write(uint8_t b) {
+//     textWrite((const char *)&b, 1);
+//     return 1;
+//   }
 
-  /**************************************************************************/
-  /*!
-       Alias of textWrite to Play nice with Arduino's Print class
+//   /**************************************************************************/
+//   /*!
+//        Alias of textWrite to Play nice with Arduino's Print class
 
-       @param buffer The buffer to write
-       @param size The size of the buffer
+//        @param buffer The buffer to write
+//        @param size The size of the buffer
 
-       @return The number of bytes written
-   */
-  /**************************************************************************/
-  virtual size_t write(const uint8_t *buffer, size_t size) {
-    textWrite((const char *)buffer, size);
-    return size;
-  }
-#endif
+//        @return The number of bytes written
+//    */
+//   /**************************************************************************/
+//   virtual size_t write(const uint8_t *buffer, size_t size) {
+//     textWrite((const char *)buffer, size);
+//     return size;
+//   }
+// #endif
 
 private:
   void PLLinit(void);
