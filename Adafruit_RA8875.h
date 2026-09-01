@@ -139,6 +139,7 @@ typedef struct // Matrix
 class Adafruit_RA8875 : public Adafruit_GFX {
 public:
   Adafruit_RA8875(uint8_t cs, uint8_t rst);
+  virtual ~Adafruit_RA8875() {}
 
   boolean begin(enum RA8875sizes s);
   void softReset(void);
